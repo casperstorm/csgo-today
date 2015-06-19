@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Team {
+class Team : NSObject {
     let id : Int
     let name : String
     let shortName : String

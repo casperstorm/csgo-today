@@ -6,6 +6,8 @@
 //  Copyright © 2015 Bob. All rights reserved.
 //
 
+import Foundation
+
 struct Content {
     var matches : Array<Match>
     var teams : Array<Team>
@@ -39,8 +41,6 @@ struct Content {
         }
     }
 }
-
-import Foundation
 
 public class API {
     func fetchContent(callback: (Content!, NSError!) -> Void) {
