@@ -14,7 +14,14 @@ class Match : NSObject {
     var team2 : Team
     var team1Score : Int
     var team2Score : Int
-    var startDate : NSDate!
+    var startDate : NSDate
+    var formattedTime : String {
+        get {
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            return dateFormatter.stringFromDate(self.startDate)
+        }
+    }
     
     init(dictionary : Dictionary<String, AnyObject>, team1: Team, team2: Team) {
         self.name = dictionary["competition_label"] as! String
@@ -22,5 +29,13 @@ class Match : NSObject {
         self.team2Score = dictionary["team2_score"] as! Int
         self.team1 = team1
         self.team2 = team2
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.AAAZ"
+        let dateString = dictionary["start_date"] as! String
+        
+        self.startDate = dateFormatter.dateFromString(dateString)!
     }
+    
+    
 }
