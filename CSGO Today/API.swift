@@ -42,8 +42,8 @@ struct Content {
     }
 }
 
-public class API {
-    func fetchContent(callback: (Content!, NSError!) -> Void) {
+class API {
+    class func fetchContent(callback: (Content!, NSError!) -> Void) {
         let session = NSURLSession.sharedSession()
         let url = NSURL(string: "https://esports-api.thescore.com/csgo/matches?start_date_from=2015-06-19T00%3A00%3A00%2B0200&start_date_to=2015-06-19T23%3A59%3A59%2B0200")
         let request = NSURLRequest(URL: url!)
