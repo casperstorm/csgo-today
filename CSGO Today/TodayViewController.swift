@@ -21,9 +21,6 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let match = Match()
-//        self.listViewController.contents = [match]
     }
 
     // MARK: - NCWidgetProviding

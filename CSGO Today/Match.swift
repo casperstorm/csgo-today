@@ -10,17 +10,17 @@ import Foundation
 
 class Match : NSObject {
     var name : String
-    var team1Id : Int!
-    var team2Id : Int!
+    var team1 : Team
+    var team2 : Team
     var team1Score : Int
     var team2Score : Int
     var startDate : NSDate!
     
-    init(dictionary : Dictionary<String, AnyObject>) {
-        name = dictionary["competition_label"] as! String
-        team1Score = dictionary["team1_score"] as! Int;
-        team2Score = dictionary["team2_score"] as! Int;
-        
-        print(dictionary)
+    init(dictionary : Dictionary<String, AnyObject>, team1: Team, team2: Team) {
+        self.name = dictionary["competition_label"] as! String
+        self.team1Score = dictionary["team1_score"] as! Int
+        self.team2Score = dictionary["team2_score"] as! Int
+        self.team1 = team1
+        self.team2 = team2
     }
 }

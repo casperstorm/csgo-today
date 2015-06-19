@@ -8,13 +8,35 @@
 
 struct Content {
     var matches : Array<Match>
-    
+    var teams : Array<Team>
+
     init(dictionary: Dictionary<String, AnyObject>) {
         let matchDictionaries = dictionary["matches"] as! Array<Dictionary<String, AnyObject>>
+        let teamsDictionaries = dictionary["teams"] as! Array<Dictionary<String, AnyObject>>
+
         self.matches = matchDictionaries.map {
-            Match(dictionary: $0)
+            let team1Id = $0["team1_id"] as! Int
+            let team2Id = $0["team2_id"] as! Int
+
+            var team1 : Team?
+            for dict in teamsDictionaries {
+                if (dict["id"] as! Int == team1Id) {
+                    team1 = Team(dictionary: dict)
+                }
+            }
+
+            var team2 : Team?
+            for dict in teamsDictionaries {
+                if (dict["id"] as! Int == team2Id) {
+                    team2 = Team(dictionary: dict)
+                }
+            }
+
+            return Match(dictionary: $0, team1: team1!, team2: team2!)
         }
-        
+        self.teams = teamsDictionaries.map {
+            Team(dictionary: $0)
+        }
     }
 }
 
