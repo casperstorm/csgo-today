@@ -10,14 +10,58 @@
 		02C4701A1B340509006A5135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C470191B340509006A5135 /* AppDelegate.swift */; };
 		02C4701C1B340509006A5135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C4701B1B340509006A5135 /* Assets.xcassets */; };
 		02C4701F1B340509006A5135 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C4701D1B340509006A5135 /* MainMenu.xib */; };
+		D02F0E961B340D6E00699086 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02F0E951B340D6E00699086 /* NotificationCenter.framework */; };
+		D02F0E9B1B340D6E00699086 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02F0E9A1B340D6E00699086 /* TodayViewController.swift */; };
+		D02F0E9D1B340D6E00699086 /* ListRowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02F0E9C1B340D6E00699086 /* ListRowViewController.swift */; };
+		D02F0EA01B340D6E00699086 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D02F0E9E1B340D6E00699086 /* TodayViewController.xib */; };
+		D02F0EA31B340D6E00699086 /* ListRowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D02F0EA11B340D6E00699086 /* ListRowViewController.xib */; };
+		D02F0EA71B340D6E00699086 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D02F0EA51B340D6E00699086 /* InfoPlist.strings */; };
+		D02F0EAA1B340D6E00699086 /* CSGO Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D02F0E931B340D6E00699086 /* CSGO Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D02F0EB11B34137400699086 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02F0EB01B34137400699086 /* Match.swift */; };
+		D02F0EB41B3417D600699086 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02F0EB31B3417D600699086 /* API.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D02F0EA81B340D6E00699086 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02C4700E1B340508006A5135 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D02F0E921B340D6E00699086;
+			remoteInfo = "CSGO Today";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D02F0EAE1B340D6E00699086 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D02F0EAA1B340D6E00699086 /* CSGO Today.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		02C470161B340509006A5135 /* CSGO Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSGO Today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C470161B340509006A5135 /* CSGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C470191B340509006A5135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C4701B1B340509006A5135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02C4701E1B340509006A5135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		02C470201B340509006A5135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02F0E931B340D6E00699086 /* CSGO Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CSGO Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02F0E951B340D6E00699086 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		D02F0E991B340D6E00699086 /* CSGO_Today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CSGO_Today.entitlements; sourceTree = "<group>"; };
+		D02F0E9A1B340D6E00699086 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		D02F0E9C1B340D6E00699086 /* ListRowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowViewController.swift; sourceTree = "<group>"; };
+		D02F0E9F1B340D6E00699086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TodayViewController.xib; sourceTree = "<group>"; };
+		D02F0EA21B340D6E00699086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ListRowViewController.xib; sourceTree = "<group>"; };
+		D02F0EA41B340D6E00699086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02F0EA61B340D6E00699086 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D02F0EB01B34137400699086 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		D02F0EB31B3417D600699086 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +72,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D02F0E901B340D6E00699086 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02F0E961B340D6E00699086 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -35,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				02C470181B340509006A5135 /* CSGO Today */,
+				D02F0E971B340D6E00699086 /* CSGO Today */,
+				D02F0E941B340D6E00699086 /* Frameworks */,
 				02C470171B340509006A5135 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -42,7 +96,8 @@
 		02C470171B340509006A5135 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02C470161B340509006A5135 /* CSGO Today.app */,
+				02C470161B340509006A5135 /* CSGO.app */,
+				D02F0E931B340D6E00699086 /* CSGO Today.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,16 +113,83 @@
 			path = "CSGO Today";
 			sourceTree = "<group>";
 		};
+		D02F0E941B340D6E00699086 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D02F0E951B340D6E00699086 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D02F0E971B340D6E00699086 /* CSGO Today */ = {
+			isa = PBXGroup;
+			children = (
+				D02F0EB21B34179F00699086 /* API */,
+				D02F0EAF1B34135C00699086 /* Model */,
+				D02F0E9A1B340D6E00699086 /* TodayViewController.swift */,
+				D02F0E9C1B340D6E00699086 /* ListRowViewController.swift */,
+				D02F0E9E1B340D6E00699086 /* TodayViewController.xib */,
+				D02F0EA11B340D6E00699086 /* ListRowViewController.xib */,
+				D02F0EA41B340D6E00699086 /* Info.plist */,
+				D02F0EA51B340D6E00699086 /* InfoPlist.strings */,
+				D02F0E981B340D6E00699086 /* Supporting Files */,
+			);
+			path = "CSGO Today";
+			sourceTree = "<group>";
+		};
+		D02F0E981B340D6E00699086 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D02F0E991B340D6E00699086 /* CSGO_Today.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D02F0EAF1B34135C00699086 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D02F0EB01B34137400699086 /* Match.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D02F0EB21B34179F00699086 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D02F0EB31B3417D600699086 /* API.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02C470151B340508006A5135 /* CSGO Today */ = {
+		02C470151B340508006A5135 /* CSGO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02C470231B340509006A5135 /* Build configuration list for PBXNativeTarget "CSGO Today" */;
+			buildConfigurationList = 02C470231B340509006A5135 /* Build configuration list for PBXNativeTarget "CSGO" */;
 			buildPhases = (
 				02C470121B340508006A5135 /* Sources */,
 				02C470131B340508006A5135 /* Frameworks */,
 				02C470141B340508006A5135 /* Resources */,
+				D02F0EAE1B340D6E00699086 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D02F0EA91B340D6E00699086 /* PBXTargetDependency */,
+			);
+			name = CSGO;
+			productName = "CSGO Today";
+			productReference = 02C470161B340509006A5135 /* CSGO.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D02F0E921B340D6E00699086 /* CSGO Today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D02F0EAB1B340D6E00699086 /* Build configuration list for PBXNativeTarget "CSGO Today" */;
+			buildPhases = (
+				D02F0E8F1B340D6E00699086 /* Sources */,
+				D02F0E901B340D6E00699086 /* Frameworks */,
+				D02F0E911B340D6E00699086 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -75,8 +197,8 @@
 			);
 			name = "CSGO Today";
 			productName = "CSGO Today";
-			productReference = 02C470161B340509006A5135 /* CSGO Today.app */;
-			productType = "com.apple.product-type.application";
+			productReference = D02F0E931B340D6E00699086 /* CSGO Today.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -88,6 +210,9 @@
 				ORGANIZATIONNAME = Bob;
 				TargetAttributes = {
 					02C470151B340508006A5135 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					D02F0E921B340D6E00699086 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 				};
@@ -105,7 +230,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02C470151B340508006A5135 /* CSGO Today */,
+				02C470151B340508006A5135 /* CSGO */,
+				D02F0E921B340D6E00699086 /* CSGO Today */,
 			);
 		};
 /* End PBXProject section */
@@ -120,6 +246,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D02F0E911B340D6E00699086 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02F0EA01B340D6E00699086 /* TodayViewController.xib in Resources */,
+				D02F0EA71B340D6E00699086 /* InfoPlist.strings in Resources */,
+				D02F0EA31B340D6E00699086 /* ListRowViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -131,7 +267,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D02F0E8F1B340D6E00699086 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02F0E9B1B340D6E00699086 /* TodayViewController.swift in Sources */,
+				D02F0E9D1B340D6E00699086 /* ListRowViewController.swift in Sources */,
+				D02F0EB41B3417D600699086 /* API.swift in Sources */,
+				D02F0EB11B34137400699086 /* Match.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D02F0EA91B340D6E00699086 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D02F0E921B340D6E00699086 /* CSGO Today */;
+			targetProxy = D02F0EA81B340D6E00699086 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		02C4701D1B340509006A5135 /* MainMenu.xib */ = {
@@ -140,6 +295,30 @@
 				02C4701E1B340509006A5135 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		D02F0E9E1B340D6E00699086 /* TodayViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D02F0E9F1B340D6E00699086 /* Base */,
+			);
+			name = TodayViewController.xib;
+			sourceTree = "<group>";
+		};
+		D02F0EA11B340D6E00699086 /* ListRowViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D02F0EA21B340D6E00699086 /* Base */,
+			);
+			name = ListRowViewController.xib;
+			sourceTree = "<group>";
+		};
+		D02F0EA51B340D6E00699086 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D02F0EA61B340D6E00699086 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -230,6 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "CSGO Today/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bob.CSGO-Today";
@@ -242,10 +422,39 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "CSGO Today/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bob.CSGO-Today";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D02F0EAC1B340D6E00699086 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "CSGO Today/CSGO_Today.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "CSGO Today/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bob.CSGO-Today.CSGO-Today";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D02F0EAD1B340D6E00699086 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "CSGO Today/CSGO_Today.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "CSGO Today/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Bob.CSGO-Today.CSGO-Today";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -261,11 +470,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02C470231B340509006A5135 /* Build configuration list for PBXNativeTarget "CSGO Today" */ = {
+		02C470231B340509006A5135 /* Build configuration list for PBXNativeTarget "CSGO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02C470241B340509006A5135 /* Debug */,
 				02C470251B340509006A5135 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D02F0EAB1B340D6E00699086 /* Build configuration list for PBXNativeTarget "CSGO Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D02F0EAC1B340D6E00699086 /* Debug */,
+				D02F0EAD1B340D6E00699086 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
