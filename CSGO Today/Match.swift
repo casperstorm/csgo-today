@@ -15,6 +15,7 @@ class Match : NSObject {
     var team1Score : Int
     var team2Score : Int
     var startDate : NSDate
+    var imageUrl : NSURL
     var formattedTime : String {
         get {
             let dateFormatter = NSDateFormatter()
@@ -29,6 +30,7 @@ class Match : NSObject {
         self.team2Score = dictionary["team2_score"] as! Int
         self.team1 = team1
         self.team2 = team2
+        self.imageUrl = NSURL(string:"http://s3.amazonaws.com/esports-core-artifacts/csgo/teams/logos/000/000/019/w72xh72/data?1432679184")!
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.AAAZ"

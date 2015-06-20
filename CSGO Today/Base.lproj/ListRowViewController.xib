@@ -6,6 +6,13 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ListRowViewController" customModule="CSGO_Today" customModuleProvider="target">
             <connections>
+                <outlet property="team1ImageView" destination="vf1-XM-x7k" id="VUH-vK-Dl9"/>
+                <outlet property="team1NameTextField" destination="Mjh-g1-xg1" id="T5I-jy-bn9"/>
+                <outlet property="team1ScoreTextField" destination="fj5-Sk-vvZ" id="KAf-H7-EDf"/>
+                <outlet property="team2ImageView" destination="bpT-Ak-Lfg" id="ZPv-UY-xce"/>
+                <outlet property="team2NameTextField" destination="ipJ-P4-gMm" id="hHV-Qa-ghL"/>
+                <outlet property="team2ScoreTextField" destination="7uq-nU-S6W" id="gQ7-PQ-4dw"/>
+                <outlet property="timeTextField" destination="xKv-02-1t0" id="XPZ-14-IV3"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -14,77 +21,71 @@
         <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mjh-g1-xg1">
-                    <rect key="frame" x="45" y="39" width="215" height="28"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mjh-g1-xg1" userLabel="team_1_label">
+                    <rect key="frame" x="45" y="46" width="215" height="28"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Lvr-3C-U5d">
-                        <font key="font" size="17" name="HelveticaNeue"/>
+                        <font key="font" size="14" name="HelveticaNeue"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        <connections>
-                            <binding destination="-2" name="value" keyPath="self.representedObject.team1.name" id="rcc-d3-AhN"/>
-                        </connections>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fj5-Sk-vvZ">
-                    <rect key="frame" x="280" y="39" width="36" height="28"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fj5-Sk-vvZ" userLabel="team_1_score_label">
+                    <rect key="frame" x="280" y="43" width="36" height="28"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="3wW-7t-d0p">
-                        <font key="font" size="17" name="HelveticaNeue"/>
+                        <font key="font" size="14" name="HelveticaNeue"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <binding destination="-2" name="value" keyPath="self.representedObject.team1Score" id="uxr-gK-Ycx"/>
-                    </connections>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7uq-nU-S6W">
-                    <rect key="frame" x="280" y="6" width="36" height="28"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7uq-nU-S6W" userLabel="team_2_score_label">
+                    <rect key="frame" x="280" y="15" width="36" height="28"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="3" id="U9Y-c3-muf">
-                        <font key="font" size="17" name="HelveticaNeue"/>
+                        <font key="font" size="14" name="HelveticaNeue"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <binding destination="-2" name="value" keyPath="self.representedObject.team2Score" id="ltG-KM-5iq"/>
-                    </connections>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ipJ-P4-gMm">
-                    <rect key="frame" x="45" y="6" width="215" height="28"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ipJ-P4-gMm" userLabel="team_2_label">
+                    <rect key="frame" x="45" y="16" width="215" height="28"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="yIR-pi-RgI">
-                        <font key="font" size="17" name="HelveticaNeue"/>
+                        <font key="font" size="14" name="HelveticaNeue"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <binding destination="-2" name="value" keyPath="self.representedObject.team2.name" id="A4J-pd-ccW"/>
-                    </connections>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xKv-02-1t0">
-                    <rect key="frame" x="3" y="46" width="35" height="18"/>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vf1-XM-x7k" userLabel="team_1_image_view">
+                    <rect key="frame" x="20" y="47" width="20" height="20"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="l5h-NP-PwU"/>
+                </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bpT-Ak-Lfg" userLabel="team_2_image_view">
+                    <rect key="frame" x="20" y="19" width="20" height="20"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="xh8-xw-MLz"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xKv-02-1t0" userLabel="match_time_label">
+                    <rect key="frame" x="281" y="31" width="35" height="18"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="13:00" id="KLm-Y5-OIG">
                         <font key="font" size="12" name="HelveticaNeue"/>
                         <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <binding destination="-2" name="value" keyPath="self.representedObject.formattedTime" id="Cqn-LY-lzO"/>
-                    </connections>
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="Mjh-g1-xg1" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="13" id="32b-P7-Vk0"/>
-                <constraint firstItem="7uq-nU-S6W" firstAttribute="width" secondItem="fj5-Sk-vvZ" secondAttribute="width" id="9rv-6a-uhU"/>
-                <constraint firstItem="ipJ-P4-gMm" firstAttribute="height" secondItem="Mjh-g1-xg1" secondAttribute="height" id="AL2-ar-QPk"/>
-                <constraint firstAttribute="trailing" secondItem="7uq-nU-S6W" secondAttribute="trailing" constant="6" id="C0v-2S-X5o"/>
-                <constraint firstItem="ipJ-P4-gMm" firstAttribute="top" secondItem="Mjh-g1-xg1" secondAttribute="bottom" constant="5" id="Cwn-N4-hZ2"/>
-                <constraint firstAttribute="trailing" secondItem="fj5-Sk-vvZ" secondAttribute="trailing" constant="6" id="Ku8-BZ-WUj"/>
-                <constraint firstAttribute="bottom" secondItem="7uq-nU-S6W" secondAttribute="bottom" constant="6" id="So6-SO-gju"/>
-                <constraint firstItem="7uq-nU-S6W" firstAttribute="height" secondItem="fj5-Sk-vvZ" secondAttribute="height" id="VBr-OO-ZGR"/>
-                <constraint firstItem="fj5-Sk-vvZ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="13" id="Vga-C5-spB"/>
-                <constraint firstItem="xKv-02-1t0" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="5" id="YTl-0A-yZR"/>
-                <constraint firstAttribute="bottom" secondItem="ipJ-P4-gMm" secondAttribute="bottom" constant="6" id="czx-UJ-RqQ"/>
-                <constraint firstItem="7uq-nU-S6W" firstAttribute="top" secondItem="fj5-Sk-vvZ" secondAttribute="bottom" constant="5" id="erz-Qw-pBW"/>
-                <constraint firstItem="xKv-02-1t0" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="16" id="ll0-5z-I56"/>
-                <constraint firstItem="ipJ-P4-gMm" firstAttribute="width" secondItem="Mjh-g1-xg1" secondAttribute="width" id="qMw-Hm-EVq"/>
+                <constraint firstAttribute="bottom" secondItem="ipJ-P4-gMm" secondAttribute="bottom" constant="12" id="2UE-09-xy6"/>
+                <constraint firstAttribute="trailing" secondItem="fj5-Sk-vvZ" secondAttribute="trailing" constant="6" id="3u5-9p-VIL"/>
+                <constraint firstAttribute="trailing" secondItem="7uq-nU-S6W" secondAttribute="trailing" constant="6" id="KZp-tH-ixy"/>
+                <constraint firstItem="fj5-Sk-vvZ" firstAttribute="centerY" secondItem="Mjh-g1-xg1" secondAttribute="centerY" id="M1U-Za-SWH"/>
+                <constraint firstItem="vf1-XM-x7k" firstAttribute="top" secondItem="Mjh-g1-xg1" secondAttribute="top" id="Nwm-7N-phY"/>
+                <constraint firstItem="xKv-02-1t0" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="OIy-2e-3R0"/>
+                <constraint firstItem="Mjh-g1-xg1" firstAttribute="leading" secondItem="vf1-XM-x7k" secondAttribute="trailing" constant="7" id="Qid-9s-e8d"/>
+                <constraint firstItem="ipJ-P4-gMm" firstAttribute="top" secondItem="Mjh-g1-xg1" secondAttribute="bottom" constant="2" id="V9t-0A-AdY"/>
+                <constraint firstItem="Mjh-g1-xg1" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="6" id="bWE-oQ-YRf"/>
+                <constraint firstAttribute="trailing" secondItem="xKv-02-1t0" secondAttribute="trailing" constant="6" id="dKK-bD-JNT"/>
+                <constraint firstItem="7uq-nU-S6W" firstAttribute="centerY" secondItem="ipJ-P4-gMm" secondAttribute="centerY" id="fek-g8-a2f"/>
+                <constraint firstItem="vf1-XM-x7k" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="idg-21-DS1"/>
+                <constraint firstItem="bpT-Ak-Lfg" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="p7v-se-abt"/>
+                <constraint firstItem="ipJ-P4-gMm" firstAttribute="leading" secondItem="bpT-Ak-Lfg" secondAttribute="trailing" constant="7" id="u60-Py-YFG"/>
+                <constraint firstItem="bpT-Ak-Lfg" firstAttribute="top" secondItem="ipJ-P4-gMm" secondAttribute="top" id="uty-yQ-rZy"/>
             </constraints>
         </customView>
     </objects>
