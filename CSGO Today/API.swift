@@ -66,20 +66,7 @@ public class API {
                 }
             })
         }
-//        
-//        var task = session.dataTaskWithURL(url!) { (data, response, error) in
-//            if error != nil {
-//                callback(nil, error)
-//            } else if let d = data {
-//                do {
-//                    var dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments) as? NSDictionary
-//                } catch let error as NSError {
-//                    print(error.description)
-//                }
-//
-//            }
-//        }
-        
+    
         task!.resume()
     }
 }
