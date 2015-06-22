@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02A64C761B35C60E0040039F /* NSDate+Comparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A64C751B35C60E0040039F /* NSDate+Comparison.swift */; };
 		02C4701A1B340509006A5135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C470191B340509006A5135 /* AppDelegate.swift */; };
 		02C4701C1B340509006A5135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C4701B1B340509006A5135 /* Assets.xcassets */; };
 		02C4701F1B340509006A5135 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C4701D1B340509006A5135 /* MainMenu.xib */; };
@@ -47,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02A64C751B35C60E0040039F /* NSDate+Comparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Comparison.swift"; sourceTree = "<group>"; };
 		02C470161B340509006A5135 /* CSGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C470191B340509006A5135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C4701B1B340509006A5135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02A64C741B35C5F80040039F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				02A64C751B35C60E0040039F /* NSDate+Comparison.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		02C4700D1B340508006A5135 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		D02F0E971B340D6E00699086 /* CSGO Today */ = {
 			isa = PBXGroup;
 			children = (
+				02A64C741B35C5F80040039F /* Extensions */,
 				D02F0EB21B34179F00699086 /* API */,
 				D02F0EAF1B34135C00699086 /* Model */,
 				D02F0E9A1B340D6E00699086 /* TodayViewController.swift */,
@@ -279,6 +290,7 @@
 				D02F0EB41B3417D600699086 /* API.swift in Sources */,
 				D02F0EB61B343ACD00699086 /* Team.swift in Sources */,
 				D02F0EB11B34137400699086 /* Match.swift in Sources */,
+				02A64C761B35C60E0040039F /* NSDate+Comparison.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +502,7 @@
 				D02F0EAD1B340D6E00699086 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
