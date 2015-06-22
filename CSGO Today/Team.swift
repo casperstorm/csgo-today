@@ -46,24 +46,30 @@ class Team : NSObject {
             self.country = dictionary["country"] as! String
         }
         
-        let logos = dictionary["logo"] as! Array<Dictionary<String, AnyObject>>
-        
-        self.logos = logos.map {
-            let key = $0.keys.first as String!
-            let url : String = $0[key] as! String
-            let dict : Dictionary<String, AnyObject> = ["url" : url, "size" : key]
-        
-            return TeamLogo(dictionary: dict)
+        let logos = dictionary["logo"] as! Dictionary<String, AnyObject>
+        self.logos = logos.map { (key, value) in
+            TeamLogo(dictionary: ["url" : value, "size" : key])
         }
         
-        let alternativeLogos = dictionary["alternate_logo"] as! Array<Dictionary<String, AnyObject>>
-        
-        self.alternativeLogos = alternativeLogos.map {
-            let key = $0.keys.first as String!
-            let url : String = $0[key] as! String
-            let dict : Dictionary<String, AnyObject> = ["url" : url, "size" : key]
-            
-            return TeamLogo(dictionary: dict)
+        let alternativeLogos = dictionary["alternate_logo"] as! Dictionary<String, AnyObject>
+        self.alternativeLogos = alternativeLogos.map { (key, value) in
+            TeamLogo(dictionary: ["url" : value, "size" : key])
         }
+    }
+    
+    func logoOfSize(size : TeamLogo.Size) -> TeamLogo? {
+        let logos = self.logos.filter {
+            $0.size == size
+        }
+        
+        return logos.first
+    }
+    
+    func alternativelogoOfSize(size : TeamLogo.Size) -> TeamLogo? {
+        let logos = self.alternativeLogos.filter {
+            $0.size == size
+        }
+        
+        return logos.first
     }
 }

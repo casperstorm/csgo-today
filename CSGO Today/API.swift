@@ -44,11 +44,12 @@ struct Content {
 
 class API {
     class func fetchContentWithDate(date: NSDate, callback: (Content!, NSError!) -> Void) {
+        let midnight = date.dateAtMidnight()
         let session = NSURLSession.sharedSession()
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        let nextDate = date.dateByAddingTimeInterval(60*60*24)
-        let urlString = "https://esports-api.thescore.com/csgo/matches?start_date_from=\(dateFormatter.stringFromDate(date))&start_date_to=\(dateFormatter.stringFromDate(nextDate))"
+        let nextDate = midnight.dateByAddingTimeInterval(60*60*24)
+        let urlString = "https://esports-api.thescore.com/csgo/matches?start_date_from=\(dateFormatter.stringFromDate(midnight))&start_date_to=\(dateFormatter.stringFromDate(nextDate))"
         let url = NSURL(string: urlString)
         let request = NSURLRequest(URL: url!)
         let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in

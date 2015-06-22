@@ -26,12 +26,6 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
     // MARK: - NCWidgetProviding
 
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
-        // Refresh the widget's contents in preparation for a snapshot.
-        // Call the completion handler block after the widget's contents have been
-        // refreshed. Pass NCUpdateResultNoData to indicate that nothing has changed
-        // or NCUpdateResultNewData to indicate that there is new data since the
-        // last invocation of this method.
-
         API.fetchContentWithDate(NSDate()) { (content, error) -> Void in
             self.listViewController.contents = content.matches
             completionHandler(.NewData)
@@ -40,15 +34,13 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
 
     func widgetMarginInsetsForProposedMarginInsets(var defaultMarginInset: NSEdgeInsets) -> NSEdgeInsets {
         // Override the left margin so that the list view is flush with the edge.
-        defaultMarginInset.left = 0
+        defaultMarginInset.left = -15
         return defaultMarginInset
     }
+    
     // MARK: - NCWidgetListViewDelegate
 
     func widgetList(list: NCWidgetListViewController!, viewControllerForRow row: Int) -> NSViewController! {
-        // Return a new view controller subclass for displaying an item of widget
-        // content. The NCWidgetListViewController will set the representedObject
-        // of this view controller to one of the objects in its contents array.
         return ListRowViewController()
     }
 }
