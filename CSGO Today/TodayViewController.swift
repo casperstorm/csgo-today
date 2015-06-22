@@ -32,7 +32,7 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         // or NCUpdateResultNewData to indicate that there is new data since the
         // last invocation of this method.
 
-        API.fetchContent { (content, error) -> Void in
+        API.fetchContentWithDate(NSDate()) { (content, error) -> Void in
             self.listViewController.contents = content.matches
             completionHandler(.NewData)
         }

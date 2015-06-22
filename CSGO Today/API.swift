@@ -43,9 +43,13 @@ struct Content {
 }
 
 class API {
-    class func fetchContent(callback: (Content!, NSError!) -> Void) {
+    class func fetchContentWithDate(date: NSDate, callback: (Content!, NSError!) -> Void) {
         let session = NSURLSession.sharedSession()
-        let url = NSURL(string: "https://esports-api.thescore.com/csgo/matches?start_date_from=2015-06-19T00%3A00%3A00%2B0200&start_date_to=2015-06-19T23%3A59%3A59%2B0200")
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        let nextDate = date.dateByAddingTimeInterval(60*60*24)
+        let urlString = "https://esports-api.thescore.com/csgo/matches?start_date_from=\(dateFormatter.stringFromDate(date))&start_date_to=\(dateFormatter.stringFromDate(nextDate))"
+        let url = NSURL(string: urlString)
         let request = NSURLRequest(URL: url!)
         let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
